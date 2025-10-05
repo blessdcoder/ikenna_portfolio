@@ -1,0 +1,193 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    background-color: #f0f0f0;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.navbar-custom {
+    background-color: #7b0323;
+}
+.text-custom {
+    color: #fff8dc;
+}
+
+.text-custom1 {
+    text-align: justify;
+}
+
+.text-custom2 {
+    color: #de7e5d;
+}
+
+.text-custom3 {
+    color:#bfc9d1;
+}
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: #de7e5d;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: #de7e5d;
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+    display: none;
+}
+
+.section-divider {
+    border-bottom: 2px solid #de7e5d;
+}
+
+.intro {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .6)), url(./img/intro.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blurred-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFE6B2; /* Text color */
+    padding: 20px; /* Optional padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall size */
+}
+
+.blurred-overlay:hover {
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    backdrop-filter: blur(5px); /* Apply blur effect on hover */
+}
+
+.fas {
+    font-size: 10px;
+}
+
+.button-custom {
+    background-color: transparent;
+    color: #de7e5d;
+    border: 1px solid #de7e5d;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.button-custom:hover,
+.button-custom:focus {
+    background-color: #de7e5d;
+    color: #fff8dc;
+    box-shadow: 0 0 0 0.2rem rgba(222, 126, 93, 0.25);
+}
+
+.bullet-custom {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #000000;
+}
+
+/* Make modal background darker for image popup */
+#imgPopupModal .modal-content {
+    background: rgba(24,28,35,0.95);
+    box-shadow: 0 0 40px #000;
+}
+#imgPopupModal .btn-close {
+    z-index: 10;
+}
+
+/* Style for the image inside the modal */
+#activityGallery .carousel-item img,
+#betacureGallery .carousel-item img {
+    max-height: 350px;
+    object-fit: cover;
+}
+#activityGallery, #betacureGallery {
+    background: #181c23;
+    box-shadow: 0 0 20px #000;
+    border-radius: 8px;
+    padding: 10px;}
+.gallery-thumb {
+    max-height: 120px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.gallery-thumb:hover {
+transform: scale(1.05);
+box-shadow: 0 0 0 2px #f7c873;
+}
+@media (max-width: 991.98px) {
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery-thumb {
+        max-height: 90px;
+    }
+}
+
+/* .custom{
+    background:#23272f;
+    color:#fff;
+    border-color:#f7c873;
+}
+.custom::placeholder {
+    color: #bfc9d1;
+    opacity: 1;
+}
+
+.custom1 {
+    background:#23272f;
+    color:#fff;
+    border-color:#f7c873;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 250px;
+}
+.custom1::placeholder {
+    color: #bfc9d1;
+    opacity: 1;
+} */
